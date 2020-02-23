@@ -10,7 +10,7 @@
 	 	http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd">
 
 	<!-- 只需要扫描包中的 Controller 注解 -->
-	<context:component-scan base-package="com.ischoolbar.programmer.controller">
+	<context:component-scan base-package="controller">
 	<context:include-filter type="annotation"
 		expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
@@ -53,13 +53,13 @@
 			<mvc:exclude-mapping path="/system/login"/>
 			<mvc:exclude-mapping path="/system/get_cpacha"/>
 			<mvc:exclude-mapping path="/resources/**"/>
-			<bean class="com.ischoolbar.programmer.interceptor.admin.LoginInterceptor"></bean>
+			<bean class="interceptor.admin.LoginInterceptor"></bean>
 		</mvc:interceptor>
 		
 		<!-- 前台访问拦截器 -->
 		<mvc:interceptor>
 			<mvc:mapping path="/home/account/**"/>
-			<bean class="com.ischoolbar.programmer.interceptor.home.LoginInterceptor"></bean>
+			<bean class="interceptor.home.LoginInterceptor"></bean>
 		</mvc:interceptor>
 	</mvc:interceptors>
 	 
