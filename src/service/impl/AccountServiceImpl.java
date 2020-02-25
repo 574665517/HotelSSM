@@ -63,7 +63,4 @@ public class AccountServiceImpl implements AccountService {
 		// TODO Auto-generated method stub
 		return accountDao.findAll();
 	}
-	
-	
-
 }

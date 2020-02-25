@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ischoolbar.programmer.dao.admin.RoleDao">
+<mapper namespace="dao.admin.RoleDao">
 	<!-- 角色插入操作 -->
 	<insert id="add" parameterType="Role">
 		insert into role(id,name,remark) values(null,#{name},#{remark})
